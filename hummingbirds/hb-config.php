@@ -5,7 +5,7 @@
 define('HB_PAGE1', 'example_.php');
 
 /** define the template */
-define('HB_TEMPLETE', dirname(__FILE__) . '/hb-template-sample.php')
+define('HB_TEMPLETE', dirname(__FILE__) . '/hb-template-sample.php');
 
 /** define site root (option)*/
 define('HB_SITE_URL', '');
