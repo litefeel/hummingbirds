@@ -4,7 +4,7 @@
 define('HUMMINGBIRDS', true);
 
 /**  require hb-core, it is must. */
-require( dirname( __FILE__ ) . '/hummingbirds/hb-core.php' );
+require( dirname( __FILE__ ) . '/../hummingbirds/hb-core.php' );
 
 
 /**  show page, the param is page filename. */
