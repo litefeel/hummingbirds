@@ -1,6 +1,6 @@
 <?php
 
-require( dirname(__FILE__) . '/hummingbirds/hb-verify.php');
+require( dirname(__FILE__) . '/../hummingbirds/hb-verify.php');
 
 /** add page for nav. */
 hb_add_page('example', 'example.php');
