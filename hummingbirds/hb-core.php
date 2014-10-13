@@ -2,11 +2,14 @@
 
 require( dirname(__FILE__) . '/hb-verify.php');
 
-require(dirname(__FILE__) . '/hb-init.php');
+if (!defined('HB_CONFIG')) {
+    defined('HB_CONFIG', dirname(__FILE__) . '/hb-config.php');
+}
 
 /** include config.php */
 include( HB_CONFIG );
 
+include(dirname(__FILE__) . '/hb-init.php');
 
 $_hb_filters = array();
 // <<pageName, pageFilename>>

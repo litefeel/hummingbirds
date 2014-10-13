@@ -1,11 +1,11 @@
 <?php
 
-if (!defined('HB_CONFIG')) {
+/*if (!defined('HB_CONFIG')) {
     defined('HB_CONFIG', dirname(__FILE__) . '/hb-config.php');
-}
+}*/
 
 if (!defined('HB_TEMPLATE')) {
-    define('HB_TEMPLATE', dirname(__FILE__) . '/template.php');
+    define('HB_TEMPLATE', dirname(__FILE__) . '/hb-template.php');
 }
 
 if (!defined('HB_SITE_URL')) {
