@@ -1,5 +1,5 @@
 <?php
-require( dirname(__FILE__) . '/hb-verify.php');
+require( dirname(__FILE__) . '/../hummingbirds/hb-verify.php');
 ?>
 <!DOCTYPE html>
 <html>
