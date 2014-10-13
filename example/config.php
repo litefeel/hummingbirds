@@ -17,9 +17,9 @@ define('HB_PAGE1', 'example_.php');
 /**
  * (option) define the template.
  * Default hummingbirds/hb-template.php .
- * define('HB_TEMPLETE', dirname(__FILE__) . '/hb-template.php');
+ * define('HB_TEMPLATE', dirname(__FILE__) . '/hb-template.php');
  */
-define('HB_TEMPLETE', dirname(__FILE__) . '/template.php');
+define('HB_TEMPLATE', dirname(__FILE__) . '/template.php');
 
 /**
  * (option) define the site root url.
