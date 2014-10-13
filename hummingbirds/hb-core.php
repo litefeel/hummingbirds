@@ -2,7 +2,10 @@
 
 require( dirname(__FILE__) . '/hb-verify.php');
 
-include( dirname( __FILE__ ) . '/hb-config.php' );
+require(dirname(__FILE__) . '/hb-init.php');
+
+/** include config.php */
+include( HB_CONFIG );
 
 
 $_hb_filters = array();
@@ -33,6 +36,17 @@ function _hb_call_filter($key, $text = '') {
  */
 function _get_alink($text, $url, $title = '') {
     return "<a href='$url' title='$title'>$text</a>";
+}
+
+/**
+ * add sep to dir.
+ * @access private
+ */
+function _add_sep_to_dir( $dirname = '' ) {
+    if (!empty($dirname) && substr($dirname, -1) != '/') {
+        return $dirname . '/';
+    }
+    return $dirname;
 }
 
 function hb_add_page($page_name, $filename) {
@@ -75,16 +89,13 @@ function hb_body_nav() {
     global $_hb_pages;
     $nav = '<nav>';
 
-    if (defined('HB_NAV_HOME_NAME') && defined('HB_NAV_HOME_LINK')) {
-        $home_name = HB_NAV_HOME_NAME;
-        $home_link = HB_NAV_HOME_LINK;
-        if (!empty($home_name) && !empty($home_link)) {
-            $nav .= _get_alink($home_name, $home_link);
-        }
+    $home_name = HB_NAV_HOME_NAME;
+    $home_link = HB_NAV_HOME_LINK;
+    if (!empty($home_name) && !empty($home_link)) {
+        $nav .= _get_alink($home_name, $home_link);
     }
 
-    $site_url = HB_SITE_URL;
-    $site_url = empty($site_url) ? '' : $site_url;
+    $site_url = _add_sep_to_dir(HB_SITE_URL);
     foreach ($_hb_pages as $link_arr) {
         $nav .= _get_alink($link_arr[0], $site_url . $link_arr[1]);
     }
@@ -94,17 +105,16 @@ function hb_body_nav() {
 function hb_do_web($filename) {
     global $_hb_cur_page_filename;
     $_hb_cur_page_filename = $filename;
-    include(dirname( __FILE__ ) . '/hb-template.php');
+
+    /** include template.php */
+    include(HB_TEMPLATE);
 }
 
 
 function _hb_inclue_pages() {
     $path = dirname(__FILE__) . '/';
     if (defined('HB_PAGE_PATH')) {
-        $path = HB_PAGE_PATH;
-        if (!empty($path) && substr($path, -1) != '/') {
-            $path .= '/';
-        }
+        $path = _add_sep_to_dir(HB_PAGE_PATH);
     }
     $n = 1;
     while (defined('HB_PAGE' . $n)) {
