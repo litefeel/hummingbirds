@@ -3,7 +3,7 @@
 require( dirname(__FILE__) . '/hb-verify.php');
 
 if (!defined('HB_CONFIG')) {
-    defined('HB_CONFIG', dirname(__FILE__) . '/hb-config.php');
+    define('HB_CONFIG', dirname(__FILE__) . '/hb-config.php');
 }
 
 /** include config.php */

@@ -1,7 +1,7 @@
 <?php
 
 /*if (!defined('HB_CONFIG')) {
-    defined('HB_CONFIG', dirname(__FILE__) . '/hb-config.php');
+    define('HB_CONFIG', dirname(__FILE__) . '/hb-config.php');
 }*/
 
 if (!defined('HB_TEMPLATE')) {
