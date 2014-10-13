@@ -18,7 +18,7 @@
  * Default hummingbirds/hb-template.php .
  * define('HB_TEMPLATE', dirname(__FILE__) . '/hb-template.php');
  */
-define('HB_TEMPLATE', dirname(__FILE__) . '/template.php');
+define('HB_TEMPLATE', dirname(__FILE__) . '/hb-template.php');
 
 /**
  * (option) define the site root url.
