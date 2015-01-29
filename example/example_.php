@@ -21,4 +21,3 @@ this is example for hummingbirds.
 <?php
 }
 
-?>

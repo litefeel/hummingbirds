@@ -133,4 +133,3 @@ function _hb_inclue_pages() {
 /** include all page */
 _hb_inclue_pages();
 
-?>

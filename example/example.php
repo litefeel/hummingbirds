@@ -23,4 +23,3 @@ require( dirname( __FILE__ ) . '/../hummingbirds/hb-core.php' );
 /** show page, the param is page filename. */
 hb_do_web('example');
 
-?>

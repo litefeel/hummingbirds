@@ -23,5 +23,3 @@ if (!defined('HB_NAV_HOME_LINK')) {
     define('HB_NAV_HOME_LINK', '');
 }
 
-
-?>

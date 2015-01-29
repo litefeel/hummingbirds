@@ -42,4 +42,3 @@ define('HB_PAGE_PATH', dirname(__FILE__));
  */
 define('HB_NAV_HOME_NAME', 'Link');
 define('HB_NAV_HOME_LINK', 'http://www.litefeel.com');
-?>
