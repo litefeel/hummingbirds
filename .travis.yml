@@ -8,4 +8,6 @@ php:
   - 5.2
 
 
-script: php -d error_reporting=E_ALL example/example.php
+script: 
+  - php -d error_reporting=E_ALL -d error_log=error.log example/example.php
+  - cat error.log
