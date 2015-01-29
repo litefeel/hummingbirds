@@ -26,3 +26,5 @@ hb_do_web('example');
 echo $xxx;
 
 $xxx->a;
+
+echo (aass
