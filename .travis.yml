@@ -8,4 +8,4 @@ php:
   - 5.2
 
 
-script: php -e  example/example.php
+script: php -e -d error_reporting=E_ALL&E_STRICT example/example.php
