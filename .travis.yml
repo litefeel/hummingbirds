@@ -9,5 +9,5 @@ php:
 
 
 script: 
-  - php -d error_reporting=E_ALL -d error_log=error.log example/example.php
+  - php -d error_reporting=E_ALL -d error_log=error.log -d log_errors=1 example/example.php
   - cat error.log
